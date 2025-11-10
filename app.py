@@ -9,7 +9,7 @@ from flask import Flask, request, jsonify, send_file, Response
 app = Flask(__name__)
 
 # DigitalOcean Serverless Inference base + model access key (set this in env)
-DO_INFERENCE_BASE = "https://inference.do-ai.run/v1"
+DO_INFERENCE_BASE = "https://inference.do-ai.run/v1/async-invoke"
 DO_MODEL_ACCESS_KEY = os.getenv("DO_MODEL_ACCESS_KEY", "")
 HEADERS = {"Authorization": f"Bearer {DO_MODEL_ACCESS_KEY}", "Content-Type": "application/json"}
 
